@@ -1,10 +1,10 @@
 [package]
 name = "gdserial"
-version = "0.3.1"
+version = "0.4.0-spampi"
 edition = "2021"
 description = "Serial communication library for Godot 4 with PySerial-like API - Arduino, sensors, IoT integration"
 license = "MIT"
-repository = "https://github.com/SujithChristopher/gdserial"
+repository = "https://github.com/marcospampi/gdserial"
 keywords = [
     "godot",
     "serial",
@@ -21,8 +21,10 @@ authors = ["Sujith Christopher"]
 crate-type = ["cdylib"]
 
 [dependencies]
-godot = "0.4.5"
-serialport = "4.7.2"
+godot = { version = "0.5.0", features = ["experimental-threads", "register-docs"] }
+godot-macros = "0.5.1"
+litrs = "=1.0.0"
+serialport = "4.9.0"
 
 [profile.release]
 opt-level = 3   # Maximum optimization
